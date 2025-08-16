@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Manual</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Collab Handler</h1>
+    </div>
+    <h2>!!DISCLAIMER!!</h2>
+    <p>This bot only saves the gameplay and decoration parts of the collabs. You can manually save verifiers, mergers, etc. but you cannot enter its data here as the bot will freak out.</p>
+    <div class="command">
+        <h3>!setserverdata [host user id] [gp judge role id] [deco judge role id] [judge channel id] [error channel id]</h3>
+        <p>This command should be the first command to run. Turn on developer mode to add an id of the channels, roles and user ids. This command can ONLY BE USED BY THE CREATOR OF THE SERVER.</p>
+        <img src="images/img03.png"width=30%>
+    </div>
+    <div class="command">
+        <h3>!create [collab name (do not add spaces)] [collab host id (only one)] [gameplay role standard] [decoration role standard] [standard type] [amount of gameplay parts] [amount of deco parts] [song name (no spaces)]</h3>
+        <p>This command can only be used by the host of the collab team the server creator has set.</p>
+        <p>Upon creation, the bot will create a catergory for the collab, an info channel, a finished channel (for finished parts) and a progress channel only visible to the people who joined the parts</p>
+        <p>If your collab name has multiple words, use underscores instead of spaces (or use camel casing).</p>
+        <p>Standard type can only be "binary" or "tiers" in all lowercase. Tiers indicate that there are tiers on standards, and the person joining must be higher or equals to the role you set in [gameplay role standard] and [decoration role standard]. Binary indicates the collab can be joined if you have the roles you set in [gameplay role standard] [decoration role standard]</p>
+        <p>If there is no deco parts or gameplay parts, put a 0 in the said standards and put 0 on how many said parts there are.</p>
+        <p>Upon creation of the channels, feel free to change the names of the catergories and channel to fit your liking.</p>
+        <img src="images/img00.png" alt="">
+    </div>
+    <div class="command">
+        <h3>!delete [collab name (do not add spaces)]</h3>
+        <p>This command can only be used by the host of the collab team the server creator has set.</p>
+        <p>Simply deletes the catergory and channel created by the bot.</p>
+        <p>If your collab name has multiple words, use underscores instead of spaces (or use camel casing).</p>
+    </div>
+    <div class="command">
+        <h3>!edit [collab name (do not add spaces)] [attribute / property] [edit]</h3>
+        <p>This command can only be used by the host of the collab team the server creator has set.</p>
+        <p>Edits the instructed attribute / property.</p>
+        <p>Valid properties include:</p>
+        <ul>
+            <li>User id of the collab host (collab_host)</li>
+            <li>Role ids for the permissions for gameplay and decoration (perm_gp / perm_deco)</li>
+            <li>Amount of gameply / decoration parts (gp / deco)</li>
+            <li>Song name (song)</li>
+        </ul>
+    </div>
+    <div class="command">
+        <h3>!join [collab name (do not add spaces)] [type of part] [part number]</h3>
+        <p>Lets a user join a collab.</p>
+        <p>The type of part can only be "gp" or "deco" in all lower case</p>
+        <p>If the collab is binary type, when the user has the gameplay / deco role they will immediately join.</p>
+        <p>If the collab is tier type, when the user has a gameplay / deco role higher than the standard then they will join.</p>
+        <p>The user can only join 2 parts per collabs.</p>
+    </div>
+    <div class="command">
+        <h3>!quit [collab name (do not add spaces)] [type of part] [part number]</h3>
+        <p>Lets a user join a collab.</p>
+        <p>The type of part can only be "gp" or "deco" in all lower case</p>
+        <p>Upon quiting, they cannot join the collab again.</p>
+    </div>
+    <div class="command">
+        <h3>!kick [collab name (do not add spaces)] [type of part] [part number]</h3>
+        <p>This command can only be used by the host of the collab team the server creator has set OR the collab host.</p>
+        <p>Kicks a user from a collab forcefully.</p>
+        <p>The type of part can only be "gp" or "deco" in all lower case.</p>
+        <p>When a user gets kicked, they cannot join the collab again.</p>
+    </div>
+    <div class="command">
+        <h3>!progress [collab name (do not add spaces)] [type of part] [part number]</h3>
+        <p>Sends progress to the collab host.</p>
+        <p>You have to attach an image / video when using this command</p>
+        <img src="images/img01.png"width=30%>
+        <p>Don't mind the mario kart. It's just an example.</p>
+        <p>Also shut up i know the time is bad</p>
+    </div>
+    <div class="command">
+        <h3>!setprog [collab name (do not add spaces)] [type of part] [part number] [progress type]</h3>
+        <p>This command can only be used by the host of the collab team the server creator has set OR the collab host.</p>
+        <p>Sets the progress of the user.</p>
+        <p>Progress type can only be "WORKING" or "FINISHED" in ALL CAPITALS.</p>
+        <p>You don't need to re-edit this message. The bot will edit it itself.</p>
+        <img src="images/img02.png"width=30%>
+    </div>
+    <div class="command">
+        <h3>!getcollabprog [collab name (do not add spaces)]</h3>
+        <p>This command can only be used by the host of the collab team the server creator has set</p>
+        <p>Sends the part info with users and their starting times and their progress.</p>
+        <p>This command should ONLY BE USED IN AN INFO CHANNEL, WHERE IT IS POSITIONED LAST.</p>
+        <p>If your collab contains verifiers, send YOUR OWN MESSAGE BEFORE RUNNING THIS COMMAND.</p>
+    </div>
+</body>
+</htm

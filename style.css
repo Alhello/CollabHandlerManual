@@ -1,0 +1,20 @@
+body {
+    background: linear-gradient(135deg, #8a66df, #7472ee);
+    height: auto;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: "Poppins";
+    color: white;
+}
+
+img {
+    border: 3px solid #ffffff;
+    margin:5px;
+}
+
+.command {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background: linear-gradient(35deg, #f05151, #e6b140);
+}
